@@ -1,8 +1,15 @@
 console.log("this is a ts file");
 const fun1 = () => {
-const a = 10;
-const b = 12;
+let a:number = 10;
+let b:string = '12';
+const add:string = a+b
+console.log(add);
 
-console.log(a+b);
+return add;
 }
-fun1();
+// const returnAdd:string = fun1();
+// console.log('returnAdd', returnAdd);
+
+const addFun = (a:any,b:string) =>  a+parseInt(b); 
+ const addfunReturn:string = addFun(1,'2').toString();
+console.log(addfunReturn);
