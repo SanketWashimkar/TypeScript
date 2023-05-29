@@ -1,61 +1,38 @@
-const typeVar = () =>{
+const checkType = () => {
 
-//premitiv type
-const string1:string = "test string";
-const number:number = 7;
-const booleanType:boolean = false;
-const undifineType:undefined = undefined;
-const nullType:null = null;
+type STATUSADD = 'status-add';
 
-//complex type
-const emptyArr:[] = [];
+type STATUSSUB = 'status-sub';
 
-const arr1:string[] = ['sanket'];
+let status: 'add' | 'sub' | 'mul' | 'div'|STATUSADD | STATUSSUB = 'add';
+status = 'add';
+status = 'sub';
+status = 'div';
+status = 'mul';
+status = 'status-add';
+status = 'status-sub';
 
-const numArr:number[] = [1,2,3,4,5,6,7,8];
+let string1 = 'string1';
 
-const stingAndnumberArr: (string | number)[] = ['abc', 5];
+console.log('status',status,typeof status);
+console.log('string1',string1, typeof string1);
 
-type sub = 'sub';
-type add = 'add';
-type mul = 'mul';
-type divi = 'divi';
 
-const arrCustoms:(add | sub | mul | divi)[] = ['add','mul','divi','sub'];
+//if (typeof status)
+//status = mul; // will give type error 
 
-// objects
-//Should not do this
 
-let obj1:{} = {};
 
-obj1 = 'string';
-obj1 = 123;
 
-//should not do this
 
-let objUser:
-{
-name: string,
-age: number,
-city?:string,
-mob:number | undefined,
-statusOfadd: sub | mul | divi | add,
-nullOrString: string | null
+
+
+
+
+
+
+
 
 
 }
-
-={
-name:'Sanket',
-age:25,
-city: 'Nagpur',
-mob:undefined,
-statusOfadd:'sub',
-nullOrString:null
-
-};
-
-//objUser.test1 = 'test' not possible due to type checking
-
-}
-typeVar();
+checkType ();
