@@ -1,30 +1,15 @@
-var typeVar = function () {
-    //premitiv type
-    var string1 = "test string";
-    var number = 7;
-    var booleanType = false;
-    var undifineType = undefined;
-    var nullType = null;
-    //complex type
-    var emptyArr = [];
-    var arr1 = ['sanket'];
-    var numArr = [1, 2, 3, 4, 5, 6, 7, 8];
-    var stingAndnumberArr = ['abc', 5];
-    var arrCustoms = ['add', 'mul', 'divi', 'sub'];
-    // objects
-    //Should not do this
-    var obj1 = {};
-    obj1 = 'string';
-    obj1 = 123;
-    //should not do this
-    var objUser = {
-        name: 'Sanket',
-        age: 25,
-        city: 'Nagpur',
-        mob: undefined,
-        statusOfadd: 'sub',
-        nullOrString: null
-    };
-    //objUser.test1 = 'test' not possible due to type checking
+var checkType = function () {
+    var status = 'add';
+    status = 'add';
+    status = 'sub';
+    status = 'div';
+    status = 'mul';
+    status = 'status-add';
+    status = 'status-sub';
+    var string1 = 'string1';
+    console.log('status', status, typeof status);
+    console.log('string1', string1, typeof string1);
+    //if (typeof status)
+    //status = mul; // will give type error 
 };
-typeVar();
+checkType();
